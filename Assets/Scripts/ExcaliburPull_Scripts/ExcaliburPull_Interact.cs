@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class ExcaliburPull_Interact : MonoBehaviour
 {
     public int n;
-   
-    
+    public SceneController winConBool;
+
+    void start()
+    {
+        GameObject g = GameObject.FindGameObjectWithTag(WinConTag);
+        winConBool = g.GetComponent<SceneController>();
+    }
     void Update()
     {
         //This is moving the sword up 1 unit everytime space is pressed. The += means it's moving and setting from current coords than just moving the prefab to 0,1,0
@@ -23,7 +28,7 @@ public class ExcaliburPull_Interact : MonoBehaviour
             n += 1;
             if (n == 20)
             {
-                Debug.Log("The sword has been freed!");
+                //getWinCon.winCondition = true;
             }
         }
     }

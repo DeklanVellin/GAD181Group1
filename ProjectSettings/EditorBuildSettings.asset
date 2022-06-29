@@ -5,7 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/BambooSlice.unity
+    guid: 38ea82a936567de4cadb7ef0cdaf0637
+  - enabled: 1
+    path: Assets/Scenes/ExcaliburPull_SCN.unity
+    guid: 468f4fea9f45d07408bd92002e853dac
+  - enabled: 1
+    path: Assets/Scenes/SharpenSwords.unity
+    guid: 6d1e4d6a7374d844b8e3387d6b480ba0
+  - enabled: 1
+    path: Assets/Scenes/SwordAssembly_SCN.unity
+    guid: d377e67fd600b9240a8036a59be27c78
+  - enabled: 1
+    path: Assets/Scenes/SwordRain_SCN.unity
+    guid: 5d336b03f8b53c944971abd99aec6aee
+  - enabled: 1
+    path: Assets/Scenes/WinScreen_SCN.unity
+    guid: 096e46b49a733e8499ffba61a14d7b69
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen_SCN.unity
+    guid: 3495930a383823247b03eda1a40c76bf
   m_configObjects: {}
