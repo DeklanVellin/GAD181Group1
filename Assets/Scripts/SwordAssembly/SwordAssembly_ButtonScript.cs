@@ -6,20 +6,25 @@ using UnityEngine.UI;
 public class SwordAssembly_ButtonScript : MonoBehaviour
 {
     public int ButtonID;
-    SwordAssembly_Controller SequenceCheck;
+
+    SwordAssembly_Controller sequenceCheck;
+    SwordAssembly_Controller gamestateCheck;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gamestateCheck = FindObjectOfType<SwordAssembly_Controller>();
     }
 
     public void Pressed()
     {
-        this.GetComponent<Image>().color = Color.red;
-        print("You pressed a button");
-        SequenceCheck = FindObjectOfType<SwordAssembly_Controller>();
-        SequenceCheck.ButtonActivated(ButtonID);
+        if(gamestateCheck.gameActive)
+        {
+            this.GetComponent<Image>().color = Color.red;
+            print("You pressed a button");
+            sequenceCheck = FindObjectOfType<SwordAssembly_Controller>();
+            sequenceCheck.ButtonActivated(ButtonID);
+        }
     }
 
     // Update is called once per frame

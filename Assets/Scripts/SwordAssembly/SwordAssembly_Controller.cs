@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwordAssembly_Controller : MonoBehaviour
 {
-    bool gameActive = true;
+    public bool gameActive = true;
     int sequenceProgress = 1;
 
     // Start is called before the first frame update
