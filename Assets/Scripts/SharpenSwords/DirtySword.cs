@@ -12,6 +12,7 @@ public class DirtySword : MonoBehaviour
         {
             print("Don't touch me " + collisionData.gameObject.name);
             sharpCounter++;
+            Destroy(this.gameObject);
         }
       
     }
