@@ -29,7 +29,7 @@ public class SwordRain_Player : MonoBehaviour
     }
 
     // Collision test
-    void OnCollisionEnter2D(Collision2D collisionData)
+    void OnCollisionEnter2D()
     {
         SwordRain_EventManager.RunDead();
     }
