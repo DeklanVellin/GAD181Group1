@@ -1301,7 +1301,7 @@ GameObject:
   - component: {fileID: 2119814009}
   - component: {fileID: 2119814008}
   m_Layer: 0
-  m_Name: Controller
+  m_Name: SequenceController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

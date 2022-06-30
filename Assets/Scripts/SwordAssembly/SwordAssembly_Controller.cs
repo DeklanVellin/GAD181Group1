@@ -7,6 +7,8 @@ public class SwordAssembly_Controller : MonoBehaviour
     public bool gameActive = true;
     int sequenceProgress = 1;
 
+    float gameTimer = 4;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +18,17 @@ public class SwordAssembly_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gameTimer -= Time.deltaTime;
+
         if(sequenceProgress == 5 && gameActive)
         {
             print("YOU WIN!!!");
+            gameActive = false;
+        }
+
+        if(gameTimer <= 0 && gameActive)
+        {
+            print("You Lost :(");
             gameActive = false;
         }
     }
