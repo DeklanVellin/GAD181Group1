@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class LeftToRight : MonoBehaviour
 {
-    public GameObject Bar2;
-    int speed = 1;
-    public bool canMove = true;
-    public bool isAbleToMove = false;
+    private int speed = 1;
+    public int activationSequence;
+    public bool failedGame;
 
-    // Start is called before the first frame update
+    public Bamboo_GameController_SCR MyManager;
+
     void Start()
     {
-        Bar2.GetComponent<LtR2>();
     }
 
     private Vector3 dir = Vector3.left;
@@ -20,7 +19,8 @@ public class LeftToRight : MonoBehaviour
     //Your Update function
     void Update()
     {
-        if (canMove == true)
+
+        if (activationSequence == 0)
         {
             transform.Translate(dir * speed * Time.deltaTime);
 
@@ -32,38 +32,38 @@ public class LeftToRight : MonoBehaviour
             {
                 dir = Vector3.left;
             }
-        }
 
+            if (Input.GetKeyDown("space"))
+            {
+
+                positionCheck();
+
+            }
+        }
         if (Input.GetKeyDown("space"))
         {
-            if (canMove == true)
-            {
-                canMove = false;
-                positionCheck();
-            }
-            /*else
-            {
-                canMove = true;
-            }
-            */
+            activationSequence--;
         }
+
+
     }
 
     public void positionCheck()
     {
-        if (canMove == false)
+       
+        
+            
+        if (transform.position.x <= 2 && transform.position.x >= -2)
         {
-            isAbleToMove = true;
-            if (transform.position.x <= 2 && transform.position.x >= -2)
-            {
-                print("You win!");
-                
-            }
-            else
-            {
-                print("Unlucky");
-            }
+            print("You win!");
+            //MyManager.ReportWinLose(true);
         }
+        else
+        {
+            print("Unlucky");
+            //MyManager.ReportWinLose(false);
+        }
+        
     }
-    
+    //public void WinCounter(bool oneGameResult)
 }
