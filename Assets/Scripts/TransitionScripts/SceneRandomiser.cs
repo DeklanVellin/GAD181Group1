@@ -23,6 +23,8 @@ public class SceneRandomiser : MonoBehaviour
         //This is SUPPOSED to remove the current level played from the available list
         LevelsToPlay.Remove(nextLevel);
         //Loads the next scene that was chosen from the before code
-        SceneManager.LoadScene(nextLevel);
+        //SceneManager.LoadScene(nextLevel);
+        print("WINS "+ PlayerPrefs.GetInt("WinTotal"));
+        SceneManager.LoadScene(1);
     }
 }
