@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SwordParry_Player : MonoBehaviour
 {
+    bool canSwing = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,12 @@ public class SwordParry_Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space) && canSwing)
+        {
+            canSwing = false;
+            SwordParry_EventManager.RunSpace();
+        }
     }
+
+
 }

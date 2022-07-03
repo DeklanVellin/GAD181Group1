@@ -4,15 +4,47 @@ using UnityEngine;
 
 public class SwordParry_Arrow : MonoBehaviour
 {
-    // Start is called before the first frame update
+    float speed;
+
+    void OnEnable()
+    {
+        SwordParry_EventManager.OnSpace += CheckPosition;
+
+        SwordParry_EventManager.OnHit += DestroyArrow;
+    }
+
+    void OnDisable()
+    {
+        SwordParry_EventManager.OnSpace -= CheckPosition;
+
+        SwordParry_EventManager.OnHit -= DestroyArrow;
+    }
+
+    // Determine random speed for arrow
     void Start()
     {
-        
+        speed = Random.Range(-10f, -15.1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Move arrow towards the player at the chosen speed
+        this.transform.position += Vector3.right * Time.deltaTime * speed;
+    }
+
+    // Check the position of the arrow and begin either win or loss events
+    void CheckPosition()
+    {
+        if(this.transform.position.x > -5.45f && this.transform.position.x < -3.7f)
+        {
+            // Calls the win event if the player succsefully parries
+            SwordParry_EventManager.RunHit();
+        }
+    }
+
+    void DestroyArrow()
+    {
+        Destroy(this.gameObject);
     }
 }

@@ -17,7 +17,7 @@ public class SwordParry_EventManager : MonoBehaviour
     }
 
     // Called if the arrow is inside the winning area
-    // Arrow falls down
+    // Arrow is destroyed
     // Play win screen
     public delegate void ArrowHit();
     public static event ArrowHit OnHit;
@@ -29,7 +29,6 @@ public class SwordParry_EventManager : MonoBehaviour
     }
 
     // Called if the arrow collides with the player
-    // Arrow is destroyed
     // Play lose screen
     public delegate void PlayerLoss();
     public static event PlayerLoss OnLoss;
