@@ -22,5 +22,11 @@ public class SwordParry_Player : MonoBehaviour
         }
     }
 
-
+    void OnCollisionEnter2D(Collision2D collisionData)
+    {
+        if(collisionData.gameObject.GetComponent<SwordParry_Arrow>() != null)
+        {
+            SwordParry_EventManager.RunLoss();
+        }
+    }
 }
