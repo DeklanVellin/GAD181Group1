@@ -41,6 +41,10 @@ public class SwordParry_Arrow : MonoBehaviour
             // Calls the win event if the player succsefully parries
             SwordParry_EventManager.RunHit();
         }
+        else
+        {
+            print("Wrong time");
+        }
     }
 
     void DestroyArrow()
