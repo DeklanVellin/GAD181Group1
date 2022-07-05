@@ -7,23 +7,21 @@ public class SwordAssembly_ButtonScript : MonoBehaviour
 {
     public int ButtonID;
 
-    SwordAssembly_Controller sequenceCheck;
-    SwordAssembly_Controller gamestateCheck;
+    SwordAssembly_Controller controllerCheck;
 
     // Start is called before the first frame update
     void Start()
     {
-        gamestateCheck = FindObjectOfType<SwordAssembly_Controller>();
+        controllerCheck = FindObjectOfType<SwordAssembly_Controller>();
     }
 
     public void Pressed()
     {
-        if(gamestateCheck.gameActive)
+        if(controllerCheck.gameActive)
         {
             this.GetComponent<Image>().color = Color.red;
             print("You pressed a button");
-            sequenceCheck = FindObjectOfType<SwordAssembly_Controller>();
-            sequenceCheck.ButtonActivated(ButtonID);
+            controllerCheck.ButtonActivated(ButtonID);
         }
     }
 

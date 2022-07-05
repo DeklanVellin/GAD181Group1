@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UniversalTimer_SCR : MonoBehaviour
 {
-    public int secondsLeft;
-    public bool takingAway = false;
+    public float secondsLeft;
+
 
 
     void Start()
@@ -18,9 +18,9 @@ public class UniversalTimer_SCR : MonoBehaviour
 
     void Update()
     {
-        if (takingAway == false && secondsLeft > 0)
+        if (secondsLeft > 0)
         {
-            StartCoroutine(timerTake());
+            secondsLeft-=Time.deltaTime;
         }
 
         if (secondsLeft == 0)
@@ -30,11 +30,5 @@ public class UniversalTimer_SCR : MonoBehaviour
 
     }
 
-    IEnumerator timerTake()
-    {
-        takingAway = true;
-        yield return new WaitForSeconds(1);
-        secondsLeft -= 1;
-        takingAway = false;
-    }
+    
 }
