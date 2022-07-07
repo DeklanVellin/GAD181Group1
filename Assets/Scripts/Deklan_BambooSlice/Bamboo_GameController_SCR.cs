@@ -4,19 +4,37 @@ using UnityEngine;
 
 public class Bamboo_GameController_SCR : MonoBehaviour
 {
-    public bool failedGame;
+    public bool failedGame = false;
+    private int success = 0;
+    public bool inZone;
 
-    private void checkWinLose()
+    private void PointOver()
     {
-        if (failedGame == true)
+        if (inZone == true)
         {
-            //Play lose animation/transition scene
-            print("oh no");
+            success++;
         }
-        else
+        else if (inZone == false)
+        {
+            failedGame = true;
+        }
+        
+    }
+
+    
+
+    private void CheckWinLose()
+    {
+
+        if (failedGame == false && success == 3)
         {
             //Play win animation/transition scene
             print("hooray");
+        }
+        else if (failedGame == true)
+        {
+            //Play lose animation/transition scene
+            print("oh no");
         }
     }
 }

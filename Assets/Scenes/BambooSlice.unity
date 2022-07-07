@@ -408,6 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationSequence: 2
   failedGame: 0
+  MyManager: {fileID: 0}
 --- !u!1 &1449261512
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationSequence: 1
   failedGame: 0
+  MyManager: {fileID: 0}
 --- !u!1 &1949503228
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationSequence: 0
   failedGame: 0
+  MyManager: {fileID: 0}
 --- !u!135 &1949503230
 SphereCollider:
   m_ObjectHideFlags: 0
