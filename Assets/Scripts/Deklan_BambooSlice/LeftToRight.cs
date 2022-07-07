@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LeftToRight : MonoBehaviour
 {
-    private int speed = 1;
+    private int speed = 2;
     public int activationSequence;
     public bool failedGame;
 
