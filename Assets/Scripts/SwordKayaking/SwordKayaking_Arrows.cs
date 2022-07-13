@@ -7,6 +7,13 @@ public class SwordKayaking_Arrows : MonoBehaviour
     float lifeTime;
     public string input;
 
+    SwordKayaking_GameManager missCount;
+
+    void OnEnable()
+    {
+        missCount = FindObjectOfType<SwordKayaking_GameManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +66,8 @@ public class SwordKayaking_Arrows : MonoBehaviour
         {
             print("Key Missed");
             Destroy(this.gameObject);
+
+            missCount.misses += 1;
         }
     }
 }
