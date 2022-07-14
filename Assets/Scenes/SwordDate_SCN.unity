@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctButtonPress: 0
+  dateTimer: 4
 --- !u!114 &67714692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctButtonPress: 0
+  dateTimer: 4
 --- !u!114 &338509486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctButtonPress: 1
+  dateTimer: 4
 --- !u!114 &525808390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,6 +852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctButtonPress: 0
+  dateTimer: 4
 --- !u!114 &897122068
 MonoBehaviour:
   m_ObjectHideFlags: 0
