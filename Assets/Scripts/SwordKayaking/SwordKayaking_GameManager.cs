@@ -9,13 +9,15 @@ public class SwordKayaking_GameManager : MonoBehaviour
 
     public GameObject arrowPrefab;
 
-    public int misses;
+    int misses;
     SceneController gameComplete;
+    SwordKayaking_Warrior myWarrior;
 
     // Start is called before the first frame update
     void Start()
     {
         gameComplete = FindObjectOfType<SceneController>();
+        myWarrior = FindObjectOfType<SwordKayaking_Warrior>();
     }
 
     // Update is called once per frame
@@ -43,6 +45,14 @@ public class SwordKayaking_GameManager : MonoBehaviour
                 print("You Lose :(");
                 gameComplete.WinScreen(false);
             }
+        }
+    }
+
+    public void ArrowResult(bool success)
+    {
+        if (!success)
+        {
+            misses ++;
         }
     }
 }

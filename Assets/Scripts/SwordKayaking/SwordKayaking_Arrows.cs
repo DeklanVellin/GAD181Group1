@@ -60,14 +60,16 @@ public class SwordKayaking_Arrows : MonoBehaviour
         if (Input.GetKeyDown(input))
         {
             print("Key Hit");
+            missCount.ArrowResult(true);
+
             Destroy(this.gameObject);
         }
         else if (Input.anyKey || lifeTime <= 0)
         {
             print("Key Missed");
-            Destroy(this.gameObject);
+            missCount.ArrowResult(false);
 
-            missCount.misses += 1;
+            Destroy(this.gameObject);
         }
     }
 }
