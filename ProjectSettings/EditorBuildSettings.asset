@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoseScreen_SCN.unity
     guid: 3495930a383823247b03eda1a40c76bf
+  - enabled: 1
+    path: Assets/Scenes/SwordDate_SCN.unity
+    guid: 09e0cf268b85c0844be39a8cf34ef9ea
   m_configObjects: {}
