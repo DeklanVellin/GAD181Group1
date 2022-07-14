@@ -22,11 +22,11 @@ public class SwordKayaking_Warrior : MonoBehaviour
     {
         if (success)
         {
-
+            myAnim.SetTrigger("Success");
         }
         else
         {
-
+            myAnim.SetTrigger("Fail");
         }
     }
 }

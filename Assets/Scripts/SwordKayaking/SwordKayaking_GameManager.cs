@@ -53,6 +53,11 @@ public class SwordKayaking_GameManager : MonoBehaviour
         if (!success)
         {
             misses ++;
+            myWarrior.React(false);
+        }
+        else
+        {
+            myWarrior.React(true);
         }
     }
 }
