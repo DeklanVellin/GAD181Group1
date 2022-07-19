@@ -29,13 +29,13 @@ public class SceneController : MonoBehaviour
             //
             PlayerPrefs.SetInt("WinTotal", currentWins + 1);
             //This loads the WIN scene
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
 
         }
         else
         {
             //This loads the LOSE scene
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(7);
         }
     }
 }

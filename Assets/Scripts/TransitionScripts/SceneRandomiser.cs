@@ -1,11 +1,11 @@
-using System.Collections;
+	using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneRandomiser : MonoBehaviour
 {
-    static List<int> LevelsToPlay = new List<int> { 0, 1, 2, 3, 4, 5 };
+    static List<int> LevelsToPlay = new List<int> { 1, 2, 3, 4, 5, 8, 9, 10, 11 };
     public int sceneRandomiser;
 
     void Start()
@@ -25,6 +25,6 @@ public class SceneRandomiser : MonoBehaviour
         //Loads the next scene that was chosen from the before code
         //SceneManager.LoadScene(nextLevel);
         print("WINS "+ PlayerPrefs.GetInt("WinTotal"));
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(nextLevel);
     }
 }
