@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class LeftToRight : MonoBehaviour
 {
-    private int speed = 2;
+    private int speed = 5;
     public int activationSequence;
     public bool failedGame;
+    
 
     public Bamboo_GameController_SCR MyManager;
 
     void Start()
     {
+        GameObject g = GameObject.FindGameObjectWithTag("GameController");
+        MyManager = g.GetComponent<Bamboo_GameController_SCR>();
     }
 
     private Vector3 dir = Vector3.left;
@@ -24,11 +27,11 @@ public class LeftToRight : MonoBehaviour
         {
             transform.Translate(dir * speed * Time.deltaTime);
 
-            if (transform.position.x <= -8)
+            if (transform.position.x <= -3)
             {
                 dir = Vector3.right;
             }
-            else if (transform.position.x >= 8)
+            else if (transform.position.x >= 3)
             {
                 dir = Vector3.left;
             }
@@ -37,7 +40,8 @@ public class LeftToRight : MonoBehaviour
             {
 
                 positionCheck();
-
+                
+                
             }
         }
         if (Input.GetKeyDown("space"))
@@ -53,17 +57,23 @@ public class LeftToRight : MonoBehaviour
        
         
             
-        if (transform.position.x <= 2 && transform.position.x >= -2)
+        if (transform.position.x <= 1 && transform.position.x >= -1)
         {
-            print("You win!");
-            //MyManager.ReportWinLose(true);
+            //print("You win!");
+            
+            MyManager.inZone = true;
+            MyManager.PointOver();
+
         }
         else
         {
             print("Unlucky");
-            //MyManager.ReportWinLose(false);
+            
+            MyManager.PointOver();
         }
+
+       
         
     }
-    //public void WinCounter(bool oneGameResult)
+    
 }
