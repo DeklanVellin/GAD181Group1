@@ -36,14 +36,14 @@ public class Bamboo_GameController_SCR : MonoBehaviour
         if (failedGame == false && success == 3)
         {
             //Play win animation/transition scene
-            print("hooray");
+            
             GameObject.FindObjectOfType<SceneController>().WinScreen(true);
 
         }
         else if (failedGame == true)
         {
             //Play lose animation/transition scene
-            print("oh no");
+            
             GameObject.FindObjectOfType<SceneController>().WinScreen(false);
         }
     }
