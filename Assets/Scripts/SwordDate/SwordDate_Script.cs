@@ -8,11 +8,15 @@ public class SwordDate_Script : MonoBehaviour
 {
     public bool correctButtonPress;
 	public float dateTimer = 4f;
+	public bool gameActive = true;
+	public int correctDateButton;
+
 	SceneController gameComplete;
 	
 	void Start()
 	{
 		gameComplete = GameObject.FindObjectOfType<SceneController>();
+		correctDateButton = Random.Range (1,5);
 	}
 	
 	private void Update()
@@ -25,16 +29,18 @@ public class SwordDate_Script : MonoBehaviour
 		}
 	}
 	
-	public void WinCon()
+	public void ButtonActivated(int buttonID)
 	{
-		if(correctButtonPress == true)
+		if(buttonID == correctDateButton && gameActive)
 		{
 			print("Date successful!");
+			gameActive = false;
 			gameComplete.WinScreen(true);
 		}
 		else
 		{
 			print("She hates your guys");
+			gameActive = false;
 			gameComplete.WinScreen(false);
 		}
 	}
