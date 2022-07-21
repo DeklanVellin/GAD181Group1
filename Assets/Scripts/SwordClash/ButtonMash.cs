@@ -57,7 +57,7 @@ public class ButtonMash : MonoBehaviour
                 //checking if the win condition is TRUE from before
                 if (winCondition == true) //&& secondsLeft < 5
                 {
-                    win();
+                  
                     canPlay = false;
                     GameObject.FindObjectOfType<SceneController>().WinScreen(true);
 
@@ -65,7 +65,7 @@ public class ButtonMash : MonoBehaviour
                 }
                 else
                 {
-                    lose();
+                  
                     canPlay = false;
                     GameObject.FindObjectOfType<SceneController>().WinScreen(false);
                 }
@@ -75,16 +75,7 @@ public class ButtonMash : MonoBehaviour
 
     }
 
-    public void win()
-    {
-        print("yay woo");
-
-    }
-
-    public void lose()
-    {
-        print("aww shucks");
-    }
+    
 
 
 }

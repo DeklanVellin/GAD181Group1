@@ -8,6 +8,32 @@ public class Bamboo_GameController_SCR : MonoBehaviour
     private int success = 0;
     public bool inZone;
     private int checking = 0;
+    public float secondsLeft;
+    bool isCounting = true;
+    public SwordClash_Mechanics playing;
+
+    void Start()
+    {
+        secondsLeft = 4;
+    }
+
+    void Update()
+    {
+        if (isCounting == true)
+        {
+            if (secondsLeft > 0)
+            {
+                secondsLeft -= Time.deltaTime;
+            }
+
+            if (secondsLeft <= 0)
+            {
+                failedGame = true;
+
+                CheckWinLose();
+            }
+        }
+    }
 
     public void PointOver()
     {
@@ -48,3 +74,4 @@ public class Bamboo_GameController_SCR : MonoBehaviour
         }
     }
 }
+
