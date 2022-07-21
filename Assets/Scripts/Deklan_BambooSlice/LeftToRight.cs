@@ -14,7 +14,7 @@ public class LeftToRight : MonoBehaviour
     void Start()
     {
         GameObject g = GameObject.FindGameObjectWithTag("GameController");
-        MyManager = g.GetComponent<Bamboo_GameController_SCR>();
+        //MyManager = g.GetComponent<Bamboo_GameController_SCR>();
     }
 
     private Vector3 dir = Vector3.left;
@@ -67,8 +67,8 @@ public class LeftToRight : MonoBehaviour
         }
         else
         {
-            print("Unlucky");
-            
+            //print("Unlucky");
+            MyManager.inZone = false;
             MyManager.PointOver();
         }
 
