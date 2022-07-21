@@ -21,12 +21,19 @@ public class ButtonMash : MonoBehaviour
 
     float speed = 0.09f;
 
+    public float secondsLeft;
+    bool isCounting = true;
+
+    void Start()
+    {
+        secondsLeft = 4;
+    }
     // Update is called once per frame
     void Update()
     {
         if(canPlay == true)
         {
-            //press z to increase playercount
+            //press space to increase playercount
             if (Input.GetKeyDown("space"))
             {
                 playerCount++;
@@ -51,31 +58,42 @@ public class ButtonMash : MonoBehaviour
             //the score is determined by the difference between the player and the enemies
             currentScore = playerCount - enemyCount;
 
-            if (currentScore == 25)
+            if (currentScore == 5)
             {
                 //Setting the win condition to TRUE
                 //checking if the win condition is TRUE from before
                 if (winCondition == true) //&& secondsLeft < 5
                 {
-                  
+
                     canPlay = false;
                     GameObject.FindObjectOfType<SceneController>().WinScreen(true);
 
 
                 }
-                else
+                
+            }
+            if (isCounting == true)
+            {
+                if (secondsLeft > 0)
                 {
-                  
-                    canPlay = false;
-                    GameObject.FindObjectOfType<SceneController>().WinScreen(false);
+                    secondsLeft -= Time.deltaTime;
+                }
+
+                if (secondsLeft <= 0)
+                {
+                    winCondition = false;
+
+                    CheckWinLoss();
+
                 }
             }
         }
-
-
     }
+    public void CheckWinLoss()
+    {
+        
+        canPlay = false;
+        GameObject.FindObjectOfType<SceneController>().WinScreen(false);
 
-    
-
-
+    }   
 }

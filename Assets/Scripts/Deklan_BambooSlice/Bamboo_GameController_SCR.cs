@@ -10,7 +10,7 @@ public class Bamboo_GameController_SCR : MonoBehaviour
     private int checking = 0;
     public float secondsLeft;
     bool isCounting = true;
-    public SwordClash_Mechanics playing;
+
 
     void Start()
     {
