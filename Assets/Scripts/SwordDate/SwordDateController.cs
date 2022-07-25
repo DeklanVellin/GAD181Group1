@@ -10,7 +10,7 @@ public class SwordDateController : MonoBehaviour
 
     SwordDate_Script dateCheck;
 
-    // Start is called before the first frame update
+    //This is communicating with the script on the buttons so the same script isn't running on 4 buttons at the same time
     void Start()
     {
         dateCheck = FindObjectOfType<SwordDate_Script>();
@@ -24,6 +24,10 @@ public class SwordDateController : MonoBehaviour
         {
             //turns the button red when pressed! Just a visual flair
             this.GetComponent<Image>().color = Color.red;
+			if( ButtonID == 1)
+			{
+				this.GetComponent<Image>().color = Color.green;
+			}
             print("button pressed");
             dateCheck.ButtonActivated(ButtonID);
         }
