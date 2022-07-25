@@ -10,7 +10,9 @@ public class SwordDate_Script : MonoBehaviour
 	public float dateTimer = 4f;
 	public bool gameActive = true;
 	public int correctDateButton;
+	public SwordDateController[] myButtons;
 	//string[] myResponses = new String[]{ "Oh, she's my sister!", "I'm having an affair.", "Uhhh... no one?", "She's my work wife."};
+	
 
 	SceneController gameComplete;
 	
@@ -18,7 +20,17 @@ public class SwordDate_Script : MonoBehaviour
 	{
 		gameComplete = GameObject.FindObjectOfType<SceneController>();
 		//Random.Range choosing a random button from the 4 to be the correct one
-		correctDateButton = Random.Range (1,5);
+		correctDateButton = 1;
+		
+		//List<Vector3> buttonPositions = new List<Vector3> {new Vector3(-201, -12, 0), new Vector3(10, -12, 0), new Vector3(-201, -164, 0), new Vector3(10, -164, 0)};
+		List<Vector3> buttonPositions = new List<Vector3> {myButtons[0].transform.position, myButtons[1].transform.position, myButtons[2].transform.position, myButtons[3].transform.position};
+		
+		for(int i = 0; i < 4; i++)
+		{
+			int randomNumber = Random.Range(0,buttonPositions.Count);
+			myButtons[i].transform.position = buttonPositions[randomNumber];
+			buttonPositions.Remove(buttonPositions[randomNumber]);
+		}
 	}
 	
 	private void Update()
