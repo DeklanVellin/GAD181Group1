@@ -18,6 +18,7 @@ public class SceneController : MonoBehaviour
             PlayerPrefs.SetInt("WinTotal", 0);
         }
 		
+		//For the final win screens to show if you won or lost the game
 		/*if(WinTotal == 7)
 		{
 			SceneManager.LoadScene(12);
