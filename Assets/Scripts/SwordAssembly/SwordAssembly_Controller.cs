@@ -51,7 +51,7 @@ public class SwordAssembly_Controller : MonoBehaviour
         // Count down 4 seconds for player to complete the game
         gameTimer -= Time.deltaTime;
 
-        if(sequenceProgress == 5 && gameActive)
+        if(sequenceProgress == 4 && gameActive)
         {
             // The player wins if they complete the sequence within the time
             // Then notify the transition manager the game has been won
