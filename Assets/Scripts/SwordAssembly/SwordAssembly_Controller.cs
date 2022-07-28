@@ -10,19 +10,19 @@ public class SwordAssembly_Controller : MonoBehaviour
     float gameTimer = 4;
 
     SceneController gameComplete;
-    public SwordAssembly_ButtonScript[] myButtons;
+    public SwordAssembly_ButtonScript[] swordPieces;
 
     // Start is called before the first frame update
     void Start()
     {
         gameComplete = FindObjectOfType<SceneController>();
 
-        List<Vector3> buttonPositions = new List<Vector3> { myButtons[0].transform.position, myButtons[1].transform.position, myButtons[2].transform.position, myButtons[3].transform.position };
+        List<Vector3> buttonPositions = new List<Vector3> {swordPieces[0].transform.position, swordPieces[1].transform.position, swordPieces[2].transform.position, swordPieces[3].transform.position};
 
-        for (int i = 0; i < 4; i++)
+        for(int i = 0; i < 4; i++)
         {
             int randomNumber = Random.Range(0, buttonPositions.Count);
-            myButtons[i].transform.position = buttonPositions[randomNumber];
+            swordPieces[i].transform.position = buttonPositions[randomNumber];
             buttonPositions.Remove(buttonPositions[randomNumber]);
         }
     }
