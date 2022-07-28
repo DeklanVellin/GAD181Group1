@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SwordRain_Player : MonoBehaviour
 {
-    float lowerLimit = -9.5f;
-    float upperLimit = 9.5f;
-    float speed = 0.025f;
+    float lowerLimit = -7.5f;
+    float upperLimit = 7.5f;
+    float speed = 0.0375f;
 
     bool canMove = true;
 

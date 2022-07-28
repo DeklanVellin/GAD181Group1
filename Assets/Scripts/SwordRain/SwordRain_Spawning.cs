@@ -24,7 +24,7 @@ public class SwordRain_Spawning : MonoBehaviour
             {
                 spawnTimer -= Time.deltaTime;
             }
-            else if (Random.Range(1, 1750) == 5)
+            else if (Random.Range(0, 750) == 5)
             {
                 Instantiate(swordPrefab, transform.position, transform.rotation);
                 spawnTimer = 0.5f;
