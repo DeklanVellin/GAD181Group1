@@ -5,13 +5,14 @@ using UnityEngine;
 public class SwordAssembly_Controller : MonoBehaviour
 {
     public bool gameActive = true;
-    int sequenceProgress = 1;
+    int sequenceProgress = 0;
 
     float gameTimer = 4;
 
     SceneController gameComplete;
     public SwordAssembly_ButtonScript[] swordPieces;
     public GameObject[] swordParts;
+    public Transform[] positions;
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +77,7 @@ public class SwordAssembly_Controller : MonoBehaviour
         {
             if(buttonID == sequenceProgress)
             {
+                MovePiece();
                 sequenceProgress++;
             }
             else
@@ -88,5 +90,10 @@ public class SwordAssembly_Controller : MonoBehaviour
                 gameComplete.WinScreen(false);
             }
         }
+    }
+
+    void MovePiece()
+    {
+        swordParts[sequenceProgress].transform.position = positions[sequenceProgress].position;
     }
 }
