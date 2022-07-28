@@ -19,7 +19,7 @@ public class SwordAssembly_ButtonScript : MonoBehaviour
     {
         if(controllerCheck.gameActive)
         {
-            this.GetComponent<Image>().color = Color.red;
+            this.GetComponent<Image>().color = Color.green;
             print("You pressed a button");
             controllerCheck.ButtonActivated(ButtonID);
         }
