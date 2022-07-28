@@ -11,19 +11,36 @@ public class SwordAssembly_Controller : MonoBehaviour
 
     SceneController gameComplete;
     public SwordAssembly_ButtonScript[] swordPieces;
+    public GameObject[] swordParts;
 
     // Start is called before the first frame update
     void Start()
     {
         gameComplete = FindObjectOfType<SceneController>();
 
-        List<Vector3> buttonPositions = new List<Vector3> {swordPieces[0].transform.position, swordPieces[1].transform.position, swordPieces[2].transform.position, swordPieces[3].transform.position};
+        // Scrmable button locations
+        List<Vector3> buttonPositions = new List<Vector3> {swordPieces[0].transform.position, 
+                                                           swordPieces[1].transform.position, 
+                                                           swordPieces[2].transform.position, 
+                                                           swordPieces[3].transform.position
+                                                          };
 
         for(int i = 0; i < 4; i++)
         {
             int randomNumber = Random.Range(0, buttonPositions.Count);
             swordPieces[i].transform.position = buttonPositions[randomNumber];
             buttonPositions.Remove(buttonPositions[randomNumber]);
+        }
+
+        // Randomly place the objects in the gamespace
+        for (int i = 0; i < swordParts.Length; i++)
+        {
+            float randX = Random.Range(-330, 331);
+            float randY = Random.Range(-30, 151);
+            swordParts[i].transform.position = new Vector3(transform.position.x + randX,
+                                                           transform.position.y + randY,
+                                                           transform.position.z
+                                                          );
         }
     }
 
