@@ -7,11 +7,10 @@ using UnityEngine.SceneManagement;
 public class SwordDate_Script : MonoBehaviour
 {
     public bool correctButtonPress;
-	public float dateTimer = 4f;
+	public float dateTimer = 8f;
 	public bool gameActive = true;
 	public int correctDateButton;
 	public SwordDateController[] myButtons;
-	//string[] myResponses = new String[]{ "Oh, she's my sister!", "I'm having an affair.", "Uhhh... no one?", "She's my work wife."};
 	
 
 	SceneController gameComplete;
