@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctButtonPress: 0
-  dateTimer: 4
+  dateTimer: 8
   gameActive: 1
   correctDateButton: 0
   myButtons:

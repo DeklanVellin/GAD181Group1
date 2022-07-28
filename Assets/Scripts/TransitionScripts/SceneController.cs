@@ -17,7 +17,15 @@ public class SceneController : MonoBehaviour
         {
             PlayerPrefs.SetInt("WinTotal", 0);
         }
-    
+		
+		/*if(WinTotal == 7)
+		{
+			SceneManager.LoadScene(12);
+		}
+		else if(//Deklans script stuff)
+		{
+			SceneManager.LoadScene(13);
+		}*/
     }
 
     public void WinScreen(bool winCondition)

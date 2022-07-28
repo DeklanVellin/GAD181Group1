@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SwordParry.unity
     guid: 36ce63800f26a21499207cc6069f6ac1
+  - enabled: 1
+    path: Assets/Scenes/FinalWin_SCN.unity
+    guid: c05f03747d01c6b48892b20b26e2f6dd
+  - enabled: 1
+    path: Assets/Scenes/FinalLoss_SCN.unity
+    guid: b4f59bf2774ed8043ac738429d1b1c4b
   m_configObjects: {}
