@@ -1503,6 +1503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneRandomiser: 0
+  playerWins: 0
 --- !u!4 &1194069108
 Transform:
   m_ObjectHideFlags: 0

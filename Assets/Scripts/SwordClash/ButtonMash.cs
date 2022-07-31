@@ -19,7 +19,7 @@ public class ButtonMash : MonoBehaviour
 
     public GameObject indicator;
 
-    float speed = 0.09f;
+    float speed = 0.5f;
 
     public float secondsLeft;
     bool isCounting = true;
@@ -58,7 +58,7 @@ public class ButtonMash : MonoBehaviour
             //the score is determined by the difference between the player and the enemies
             currentScore = playerCount - enemyCount;
 
-            if (currentScore == 5)
+            if (currentScore == 9)
             {
                 //Setting the win condition to TRUE
                 //checking if the win condition is TRUE from before

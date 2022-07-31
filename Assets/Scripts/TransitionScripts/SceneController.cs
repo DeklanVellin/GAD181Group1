@@ -5,28 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    int currentWins = 0;
+    public int remainingLives = 3;
+    public int totalWins;
+
     void Start()
     {
         //Checks if we've started storing wins yet, shouldn't try to pull if it doesn't exist yet
+
+        totalWins = PlayerPrefs.GetInt("WinTotal");
+        remainingLives = PlayerPrefs.GetInt("CurrentLives");
+
+        /*
         if (PlayerPrefs.HasKey("WinTotal"))
         {
-            currentWins = PlayerPrefs.GetInt("WinTotal");   
+            PlayerPrefs.SetInt("WinTotal", currentWins);   
         } 
         else
         {
-            PlayerPrefs.SetInt("WinTotal", 0);
+            PlayerPrefs.SetInt("WinTotal", currentWins = 0);
         }
-		
-		//For the final win screens to show if you won or lost the game
-		/*if(WinTotal == 7)
-		{
-			SceneManager.LoadScene(12);
-		}
-		else if(//Deklans script stuff)
+        */
+
+        //For the final win screens to show if you won or lost the game
+        if (totalWins >= 7 && remainingLives > 0)
 		{
 			SceneManager.LoadScene(13);
-		}*/
+		}
+		else if(remainingLives <= 0)
+		{
+			SceneManager.LoadScene(14);
+		}
     }
 
     public void WinScreen(bool winCondition)
@@ -35,14 +43,16 @@ public class SceneController : MonoBehaviour
         //This could probably just be changed to a bool that tracks the win/lose condition since the buttons are just an example for now
         if (winCondition == true)
         {
-            //
-            PlayerPrefs.SetInt("WinTotal", currentWins + 1);
+            totalWins++;
+            PlayerPrefs.SetInt("WinTotal", totalWins);
             //This loads the WIN scene
             SceneManager.LoadScene(6);
 
         }
         else
         {
+            remainingLives--;
+            PlayerPrefs.SetInt("CurrentLives", remainingLives);
             //This loads the LOSE scene
             SceneManager.LoadScene(7);
         }
