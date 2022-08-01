@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public int remainingLives = 3;
+    public int remainingLives;
     public int totalWins;
 
     void Start()

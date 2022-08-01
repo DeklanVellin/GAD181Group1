@@ -8,12 +8,13 @@ public class ManuTransition : MonoBehaviour
 	
 	static List<int> LevelsToPlay = new List<int> { 0, 1, 2, 3, 4, 5 };
 	public int sceneRandomiser;
-    public int playerWins;
-	
+    int playerWins;
+    int playerLives = 3;
+
     // Start is called before the first frame update
     public void Play()
     {
-       
+        PlayerPrefs.SetInt("CurrentLives", playerLives);
         PlayerPrefs.SetInt("WinTotal", playerWins);
 
 
