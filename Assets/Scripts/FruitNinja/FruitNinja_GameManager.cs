@@ -6,7 +6,8 @@ using UnityEngine;
 public class FruitNinja_GameManager : MonoBehaviour
 {
     SceneController gameComplete;
-    float gameTimer = 4f;
+    float gameTimer = 30f;
+    public int success;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,11 @@ public class FruitNinja_GameManager : MonoBehaviour
     {
         gameTimer -= Time.deltaTime;
 
-        if(gameTimer <= 0)
+        if(gameTimer <= 0 && success >= 5)
+        {
+            gameComplete.WinScreen(true);
+        }
+        else if (gameTimer <= 0)
         {
             gameComplete.WinScreen(false);
         }

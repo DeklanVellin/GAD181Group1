@@ -7,7 +7,7 @@ public class FruitNinja_Spawners : MonoBehaviour
     public GameObject[] fruits = new GameObject[5];
    
     float spawnTimer = 0.5f;
-    bool canSpawn = true;
+    public bool canSpawn = true;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class FruitNinja_Spawners : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canSpawn)
+        if (canSpawn == true)
         {
             if (spawnTimer > 0f)
             {
@@ -27,7 +27,8 @@ public class FruitNinja_Spawners : MonoBehaviour
             else if (Random.Range(0, 2750) == 5)
             {
                 Instantiate(fruits[Random.Range(0, fruits.Length)], transform.position, transform.rotation);
-                spawnTimer = 0.5f;
+                spawnTimer = 0.5f;//Random.Range(1f, 1.5f);
+
             }
         }
     }

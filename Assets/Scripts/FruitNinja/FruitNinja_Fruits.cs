@@ -11,7 +11,7 @@ public class FruitNinja_Fruits : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initialVelocity = 10f;
+        initialVelocity = Random.Range(7f,13f);
     }
 
     // Update is called once per frame
@@ -23,7 +23,10 @@ public class FruitNinja_Fruits : MonoBehaviour
         {
             Destroy(this.gameObject);
             print("Fruit Missed");
+                                                        //GameObject.FindObjectOfType<FruitNinja_Spawners>().canSpawn = true;
         }
+
+
     }
 
     // Collision tests
@@ -35,7 +38,10 @@ public class FruitNinja_Fruits : MonoBehaviour
             // Replace with sprite chane and remove rigidbody or otherwise prevent collisions (will need to ask rex)
             //Destroy(this.gameObject);
             isWhole = false;
+            GameObject.FindObjectOfType<FruitNinja_GameManager>().success++;
+            GameObject.FindObjectOfType<FruitNinja_Spawners>().canSpawn = true;
             print("Fruit Cut");
+            Destroy(this.gameObject.GetComponent<Collider>());
         }
     }
 }
