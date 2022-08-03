@@ -9,48 +9,48 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Other/Menu.unity
     guid: 9e468faa5721a424299ab7846575717e
   - enabled: 1
-    path: Assets/Scenes/BambooSlice.unity
+    path: Assets/Scenes/MicroGames/BambooSlice.unity
     guid: 38ea82a936567de4cadb7ef0cdaf0637
   - enabled: 1
-    path: Assets/Scenes/ExcaliburPull_SCN.unity
+    path: Assets/Scenes/MicroGames/ExcaliburPull_SCN.unity
     guid: 468f4fea9f45d07408bd92002e853dac
   - enabled: 1
-    path: Assets/Scenes/SharpenSwords.unity
+    path: Assets/Scenes/MicroGames/SharpenSwords.unity
     guid: 6d1e4d6a7374d844b8e3387d6b480ba0
   - enabled: 1
-    path: Assets/Scenes/SwordAssembly_SCN.unity
+    path: Assets/Scenes/MicroGames/SwordAssembly_SCN.unity
     guid: d377e67fd600b9240a8036a59be27c78
   - enabled: 1
-    path: Assets/Scenes/SwordRain_SCN.unity
+    path: Assets/Scenes/MicroGames/SwordRain_SCN.unity
     guid: 5d336b03f8b53c944971abd99aec6aee
   - enabled: 1
-    path: Assets/Scenes/WinScreen_SCN.unity
+    path: Assets/Scenes/Other/WinScreen_SCN.unity
     guid: 096e46b49a733e8499ffba61a14d7b69
   - enabled: 1
-    path: Assets/Scenes/LoseScreen_SCN.unity
+    path: Assets/Scenes/Other/LoseScreen_SCN.unity
     guid: 3495930a383823247b03eda1a40c76bf
   - enabled: 1
-    path: Assets/Scenes/SwordDate_SCN.unity
+    path: Assets/Scenes/MicroGames/SwordDate_SCN.unity
     guid: 09e0cf268b85c0844be39a8cf34ef9ea
   - enabled: 1
-    path: Assets/Scenes/SwordClash.unity
+    path: Assets/Scenes/MicroGames/SwordClash.unity
     guid: 645ce1f886030094698a7d3b5089d866
   - enabled: 1
-    path: Assets/Scenes/SwordKayaking.unity
+    path: Assets/Scenes/MicroGames/SwordKayaking.unity
     guid: 2b2e176ca8211ae4cb8c841f14f94154
   - enabled: 1
-    path: Assets/Scenes/SwordParry.unity
+    path: Assets/Scenes/MicroGames/SwordParry.unity
     guid: 36ce63800f26a21499207cc6069f6ac1
   - enabled: 1
-    path: Assets/Scenes/SamuraiChef.unity
+    path: Assets/Scenes/MicroGames/SamuraiChef.unity
     guid: c800860b16b4a094aa1fa3e51ebcc770
   - enabled: 1
-    path: Assets/Scenes/FinalWin_SCN.unity
+    path: Assets/Scenes/Other/FinalWin_SCN.unity
     guid: c05f03747d01c6b48892b20b26e2f6dd
   - enabled: 1
-    path: Assets/Scenes/FinalLoss_SCN.unity
+    path: Assets/Scenes/Other/FinalLoss_SCN.unity
     guid: b4f59bf2774ed8043ac738429d1b1c4b
   m_configObjects: {}
