@@ -6,6 +6,8 @@ public class FruitNinja_Fruits : MonoBehaviour
 {
     float initialVelocity;
 
+    bool isWhole = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +30,11 @@ public class FruitNinja_Fruits : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collisionData)
     {
         // Only continue if colliding with player cursor
-        if (collisionData.gameObject.GetComponent<FruitNinja_Sword>() != null)
+        if (collisionData.gameObject.GetComponent<FruitNinja_Sword>() != null && isWhole)
         {
             // Replace with sprite chane and remove rigidbody or otherwise prevent collisions (will need to ask rex)
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            isWhole = false;
             print("Fruit Cut");
         }
     }
