@@ -23,14 +23,12 @@ public class FruitNinja_Fruits : MonoBehaviour
         {
             Destroy(this.gameObject);
             print("Fruit Missed");
-                                                        //GameObject.FindObjectOfType<FruitNinja_Spawners>().canSpawn = true;
         }
-
 
     }
 
     // Collision tests
-    void OnCollisionEnter2D(Collision2D collisionData)
+    void OnTriggerEnter2D(Collider2D collisionData)
     {
         // Only continue if colliding with player cursor
         if (collisionData.gameObject.GetComponent<FruitNinja_Sword>() != null && isWhole)
