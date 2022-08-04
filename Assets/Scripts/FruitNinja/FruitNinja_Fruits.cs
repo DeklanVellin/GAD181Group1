@@ -41,7 +41,7 @@ public class FruitNinja_Fruits : MonoBehaviour
             GameObject.FindObjectOfType<FruitNinja_GameManager>().success++;
             GameObject.FindObjectOfType<FruitNinja_Spawners>().canSpawn = true;
             print("Fruit Cut");
-            Destroy(this.gameObject.GetComponent<Collider>());
+            Destroy(this.gameObject.GetComponent<CircleCollider2D>());
         }
     }
 }
