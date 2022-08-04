@@ -74,8 +74,8 @@ private Vector3 dir = Vector3.left;
     void OnTriggerStay(Collider otherCollider)
     {
         
-        //and the player presses space
-        if (Input.GetKeyDown("space"))
+        //and the player presses space or a
+        if (Input.GetButtonDown("Fire1"))
         {
             //add a point to winning
             success++;

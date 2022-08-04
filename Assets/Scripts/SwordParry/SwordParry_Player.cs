@@ -15,7 +15,7 @@ public class SwordParry_Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && canSwing)
+        if(Input.GetButtonDown("Fire1") && canSwing)
         {
             canSwing = false;
             SwordParry_EventManager.RunSpace();
