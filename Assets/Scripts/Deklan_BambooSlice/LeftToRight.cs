@@ -36,7 +36,7 @@ public class LeftToRight : MonoBehaviour
                 dir = Vector3.left;
             }
 
-            if (Input.GetKeyDown("space"))
+            if (Input.GetButtonDown("Fire1"))
             {
 
                 positionCheck();
@@ -44,7 +44,7 @@ public class LeftToRight : MonoBehaviour
                 
             }
         }
-        if (Input.GetKeyDown("space"))
+        if (Input.GetButtonDown("Fire1"))
         {
             activationSequence--;
         }

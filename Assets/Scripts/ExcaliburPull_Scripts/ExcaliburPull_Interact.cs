@@ -15,7 +15,7 @@ public class ExcaliburPull_Interact : MonoBehaviour
     {
         swordTimer += Time.deltaTime;
         //This is moving the sword up 1 unit everytime space is pressed. The += means it's moving and setting from current coords than just moving the prefab to 0,1,0
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Fire1"))
         {
             transform.position += new Vector3(0, 0.25f, 0);
             //n is variable we're using to track space bar clicks. When it reaches 20, it prints the message to the console

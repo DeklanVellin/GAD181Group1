@@ -34,7 +34,7 @@ public class ButtonMash : MonoBehaviour
         if(canPlay == true)
         {
             //press space to increase playercount
-            if (Input.GetKeyDown("space"))
+            if (Input.GetButtonDown("Fire1"))
             {
                 playerCount++;
             }
