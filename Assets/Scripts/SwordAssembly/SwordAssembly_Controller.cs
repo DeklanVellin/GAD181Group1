@@ -36,8 +36,8 @@ public class SwordAssembly_Controller : MonoBehaviour
         // Randomly place the objects in the gamespace
         for (int i = 0; i < swordParts.Length; i++)
         {
-            float randX = Random.Range(-330, 331);
-            float randY = Random.Range(-30, 151);
+            float randX = Random.Range(-205, 166);
+            float randY = Random.Range(-65, 121);
             swordParts[i].transform.position = new Vector3(transform.position.x + randX,
                                                            transform.position.y + randY,
                                                            transform.position.z
