@@ -14,7 +14,7 @@ public class SwordAssembly_Controller : MonoBehaviour
     public GameObject[] swordParts;
     public Transform[] positions;
 	//Bandit putting in controller stuff, this is to have the colliders in as well as have them scramble correctly.
-	public GameObject[] myButtons;
+	//public ButtonController[] myButtons;
 	public GameObject[] myColliders;
 
     // Start is called before the first frame update
@@ -36,8 +36,6 @@ public class SwordAssembly_Controller : MonoBehaviour
             int randomNumber = Random.Range(0, buttonPositions.Count);
             swordPieces[i].transform.position = buttonPositions[randomNumber];
 			myColliders[i].transform.position = colliderPositions[randomNumber];
-			print("button" + buttonPositions);
-			print("collider" + colliderPositions);
             buttonPositions.Remove(buttonPositions[randomNumber]);
 			colliderPositions.Remove(colliderPositions[randomNumber]);
         }
