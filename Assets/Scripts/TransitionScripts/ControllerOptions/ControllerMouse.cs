@@ -5,6 +5,7 @@ using UnityEngine;
 public class ControllerMouse : MonoBehaviour
 {
 	private int controllerOn;
+	public GameObject objectToTrack;
 	
 	void Start()
 	{
@@ -18,9 +19,13 @@ public class ControllerMouse : MonoBehaviour
 		//If controllerOn == 0 means it's in keyboard and mouse mode.
 		if(controllerOn == 0)
 		{
-		Vector3 mousePos = Input.mousePosition;
-		print(mousePos.x + "x, " + mousePos.y + "y");
-        this.transform.position = (mousePos - new Vector3(Screen.width / 2, Screen.height / 2, 0))*0.007f;
+			Vector3 mousePos = Input.mousePosition;
+			//print(mousePos.x + "x, " + mousePos.y + "y");
+			this.transform.position = (mousePos - new Vector3(Screen.width / 2, Screen.height / 2, 0))*0.007f;
+		}
+		else
+		{
+			this.transform.position = new Vector3(objectToTrack.transform.position.x, objectToTrack.transform.position.y, this.transform.position.z);
 		}
     }
 }
