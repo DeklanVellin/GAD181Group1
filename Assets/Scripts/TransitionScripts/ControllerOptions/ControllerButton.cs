@@ -7,6 +7,7 @@ public class ControllerButton : MonoBehaviour
 {
 	public Button myButton;
 	
+	//Allows the button to be clicked when 'Fire1' is over it, also detects when the cursor and colliders collide.
 	void OnTriggerStay(Collider colliderData)
 	{
 		print("collision");
@@ -15,16 +16,4 @@ public class ControllerButton : MonoBehaviour
 			myButton.onClick.Invoke();
 		}
 	}
-	
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
