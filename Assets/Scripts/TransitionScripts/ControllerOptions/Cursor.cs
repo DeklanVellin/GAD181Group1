@@ -15,8 +15,10 @@ public class Cursor : MonoBehaviour
 		
     void Update()
     {
+		controllerOn = PlayerPrefs.GetInt("controllerOn");
+		this.GetComponent<Rigidbody>().velocity = new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"),0)*speed;
         //int controllerOn = get playerpref int for controller support
-		if(controllerOn == 1)
+		/*if(controllerOn == 1)
 		{
 			Vector3 positionUpdate = new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"),0);
 
@@ -29,7 +31,7 @@ public class Cursor : MonoBehaviour
 				//Printing to test if the fire button is working
 				print("you do be pressing buttons");
 				}
-		}
+		}*/
 	}
 }
 

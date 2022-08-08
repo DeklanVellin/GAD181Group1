@@ -32,4 +32,8 @@ public class SwordDateController : MonoBehaviour
             dateCheck.ButtonActivated(ButtonID);
         }
     }
+	
+		
+	
+	
 }
