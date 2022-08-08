@@ -43,7 +43,7 @@ public class SwordDate_Script : MonoBehaviour
 		
 		if(dateTimer <= 0)
 		{
-			//gameComplete.WinScreen(false);
+			gameComplete.WinScreen(false);
 		}
 	}
 
