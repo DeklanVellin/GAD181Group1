@@ -16,7 +16,7 @@ public class ManuTransition : MonoBehaviour
     {
         PlayerPrefs.SetInt("CurrentLives", playerLives);
         PlayerPrefs.SetInt("WinTotal", playerWins);
-
+		print("Lives:" + playerLives);
 
 
         int nextLevelIndex = Random.Range(0, LevelsToPlay.Count);
