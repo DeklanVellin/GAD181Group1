@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ManuTransition : MonoBehaviour
 {
 	
-	static List<int> LevelsToPlay = new List<int> { 0, 1, 2, 3, 4, 5 };
+	static List<int> LevelsToPlay = new List<int> { 1, 2, 3, 4, 5, 8, 9, 10, 11, 12 };
 	public int sceneRandomiser;
     int playerWins = 0;
     int playerLives = 3;
