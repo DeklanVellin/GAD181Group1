@@ -24,7 +24,7 @@ public class SwordParry_Spawner : MonoBehaviour
         }
         else if(canSpawn)
         {
-            Instantiate(arrowPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+            Instantiate(arrowPrefab, transform.position, transform.rotation);
             canSpawn = false;
         }
     }
