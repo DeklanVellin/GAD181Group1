@@ -36,7 +36,7 @@ public class SwordParry_Arrow : MonoBehaviour
     // Check the position of the arrow and begin either win or loss events
     void CheckPosition()
     {
-        if(this.transform.position.x > -5.45f && this.transform.position.x < -3.7f)
+        if(this.transform.position.x > -1.9f && this.transform.position.x < -0.6f)
         {
             // Calls the win event if the player succsefully parries
             SwordParry_EventManager.RunHit();
