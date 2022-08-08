@@ -23,11 +23,11 @@ public class FruitNinja_Spawners : MonoBehaviour
     {
         transform.Translate(direction * speed * Time.deltaTime);
 
-        if (transform.position.x <= -7.5f)
+        if (transform.position.x <= -5.5f)
         {
             direction = Vector3.right;
         }
-        else if (transform.position.x >= 7.5f)
+        else if (transform.position.x >= 5.5f)
         {
                 direction = Vector3.left;
         }
