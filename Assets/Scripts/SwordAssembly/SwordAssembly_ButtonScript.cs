@@ -17,6 +17,7 @@ public class SwordAssembly_ButtonScript : MonoBehaviour
 
     public void Pressed()
     {
+		print("Button with ID" + ButtonID);
         if(controllerCheck.gameActive)
         {
             this.GetComponent<Image>().color = Color.green;
