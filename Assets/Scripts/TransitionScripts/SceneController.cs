@@ -44,6 +44,7 @@ public class SceneController : MonoBehaviour
         if (winCondition == true)
         {
             totalWins++;
+			print("Game won, total lives:" + remainingLives);
             PlayerPrefs.SetInt("WinTotal", totalWins);
             //This loads the WIN scene
             SceneManager.LoadScene(6);
@@ -52,6 +53,7 @@ public class SceneController : MonoBehaviour
         else
         {
             remainingLives--;
+			print("Game lost, total lives:" + remainingLives);
             PlayerPrefs.SetInt("CurrentLives", remainingLives);
             //This loads the LOSE scene
             SceneManager.LoadScene(7);
