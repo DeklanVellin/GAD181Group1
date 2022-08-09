@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DirtySword : MonoBehaviour
 {
+
     void Start()
     {
-        
+     
     }
-
 
     //collison thing on sword
     void OnCollisionExit(Collision collisionData)

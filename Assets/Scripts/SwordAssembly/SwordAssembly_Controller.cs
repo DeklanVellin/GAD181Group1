@@ -87,7 +87,7 @@ public class SwordAssembly_Controller : MonoBehaviour
                 MovePiece();
                 sequenceProgress++;
 			}
-			else if(buttonID == sequenceProgress && Input.GetButtonDown("Fire1"))
+			else if(Input.GetButtonDown("Fire1"))
 			{
                 // The player loses if they press an incorrect button
                 // Notify the transition manager the game has been lost
