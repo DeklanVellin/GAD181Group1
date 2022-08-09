@@ -7,7 +7,7 @@ public class SwordAssembly_Controller : MonoBehaviour
     public bool gameActive = true;
     int sequenceProgress = 0;
 
-    float gameTimer = 4;
+    float gameTimer = 8;
 
     SceneController gameComplete;
     public SwordAssembly_ButtonScript[] swordPieces;
@@ -82,21 +82,21 @@ public class SwordAssembly_Controller : MonoBehaviour
     {
         if (gameActive)
         {
-            if(buttonID == sequenceProgress)
-            {
+			if(buttonID == sequenceProgress)
+			{
                 MovePiece();
                 sequenceProgress++;
-            }
-            else
-            {
+			}
+			else if(Input.GetButtonDown("Fire1"))
+			{
                 // The player loses if they press an incorrect button
                 // Notify the transition manager the game has been lost
                 print("You Lose :(");
                 gameActive = false;
 
                 gameComplete.WinScreen(false);
-            }
-        }
+			}
+		}	
     }
 
     void MovePiece()
