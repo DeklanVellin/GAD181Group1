@@ -27,11 +27,11 @@ public class LeftToRight : MonoBehaviour
         {
             transform.Translate(dir * speed * Time.deltaTime);
 
-            if (transform.position.x <= -3)
+            if (transform.position.x <= -10.5)
             {
                 dir = Vector3.right;
             }
-            else if (transform.position.x >= 3)
+            else if (transform.position.x >= -5.5)
             {
                 dir = Vector3.left;
             }
@@ -57,7 +57,7 @@ public class LeftToRight : MonoBehaviour
        
         
             
-        if (transform.position.x <= 1 && transform.position.x >= -1)
+        if (transform.position.x <= -7.5 && transform.position.x >= -8.5)
         {
             //print("You win!");
             
