@@ -6,7 +6,7 @@ public class KnifeManager : MonoBehaviour
 {
 	SceneController gameComplete;
 	
-    private float speed = 20f;
+    private float speed = 15f;
 	public float cookingTimer = 4f;
 
 	//- Successful cuts, needs 3/4 to win
@@ -17,11 +17,17 @@ public class KnifeManager : MonoBehaviour
 
     void Update()
     {
+		if (Input.GetButtonDown("Fire1"))
+		{
+			//print("ballin");
+		}
+
         if (canPlay == true)
         {
-            transform.Translate(dir * speed * Time.deltaTime);
+            //transform.Translate(dir * speed * Time.deltaTime);
 
-            dir = Vector3.right;
+            //dir = Vector3.right;
+			 transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
 		
 		//Timer nonsense! Harvested from Sword Date.
@@ -29,24 +35,19 @@ public class KnifeManager : MonoBehaviour
 		
 		if(cookingTimer <= 0)
 		{
-			gameComplete.WinScreen(false);
+			//- 3 Needed to win. Checks success from the other script.
+			if (success >=3)
+			{
+				print("YOU WIN");
+				//Run Win Transition
+				GameObject.FindObjectOfType<SceneController>().WinScreen(true);
+			}
+			else
+			{
+				print("YOU LOSE");
+				//Run Lose Transition
+				GameObject.FindObjectOfType<SceneController>().WinScreen(false);
+			}
 		}
-    }
-
-    void CheckWinLose()
-    {
-		//- 3 Needed to win.
-        if (success >=3)
-        {
-            print("YOU WIN");
-            //Run Win Transition
-            GameObject.FindObjectOfType<SceneController>().WinScreen(true);
-        }
-        else
-        {
-            print("YOU LOSE");
-            //Run Lose Transition
-            GameObject.FindObjectOfType<SceneController>().WinScreen(false);
-        }
     }
 }
