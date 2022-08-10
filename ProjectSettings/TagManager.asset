@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WinConTag
   - Dirt
+  - GameMusic
   layers:
   - Default
   - TransparentFX
