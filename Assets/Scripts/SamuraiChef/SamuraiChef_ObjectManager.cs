@@ -6,20 +6,12 @@ public class SamuraiChef_ObjectManager : MonoBehaviour
 {
     private float speed = 2.5f;
 
-    private int success;
-
-   
-
-private Vector3 dir = Vector3.left;
-
+	//- Successful cuts, needs 3/4 to win
+    public int success;
+	private Vector3 dir = Vector3.left;
+	//- Failsafe to make sure game stops when it's supposed to and transitions, true by default. Turned off at end of the game.
     public bool canPlay = true;
 
-    //public bool isColliding = false;
-
-
-
-
-    
     void Update()
     {
         if (canPlay == true)
@@ -27,27 +19,12 @@ private Vector3 dir = Vector3.left;
             transform.Translate(dir * speed * Time.deltaTime);
 
             dir = Vector3.right;
-
-            
-
-            
-
-
-            /*if (Input.GetKeyDown("space") && transform.position.x <= 2 && transform.position.x >= 1 || 
-                Input.GetKeyDown("space") && transform.position.x <= 4 && transform.position.x >= 3 ||
-                Input.GetKeyDown("space") && transform.position.x <= 6 && transform.position.x >= 5 ||
-                Input.GetKeyDown("space") && transform.position.x <= 8 && transform.position.x >= 7)
-            {
-                print("YOU WIN");
-                success++;
-                //add thing to only work once
-            }
-            */
-
-            //checking whether the cutting object is at position 10 or greater, if they are, end the game and check winning state   
+			//- When object reaches right side of screen, stop.
             if (transform.position.x >= 10)
             {
+				//- Failsafe turned on, game ends. Not set to a timer rather when the orb reaches the desired place.
                 canPlay = false;
+				//- Check the status of the 'success' variable.
                 CheckWinLose();
             }
         }
@@ -55,6 +32,7 @@ private Vector3 dir = Vector3.left;
 
     void CheckWinLose()
     {
+		//- 3 Needed to win.
         if (success >=3)
         {
             print("YOU WIN");
@@ -69,31 +47,20 @@ private Vector3 dir = Vector3.left;
         }
     }
 
-    
-    //if the main object is inside of the cutting zone
+    /* //if the main object is inside of the cutting zone
     void OnTriggerStay(Collider otherCollider)
-    {
+    {	
         
         //and the player presses space or a
         if (Input.GetButtonDown("Fire1"))
         {
-            //add a point to winning
+            print("Cube interacted with successfully");
+			//add a point to winning
             success++;
             //change the colour of the object that the cutting zone is on
             otherCollider.gameObject.GetComponent<Renderer>().material.color = Color.red;
             //delete the cutting zone collider
             Destroy(otherCollider);
-            
-
         }
-    }
-
-
-    void OnTriggerExit(Collider otherCollider)
-    {
-        
-    }
-
-
-
+    }*/
 }
