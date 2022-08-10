@@ -6,7 +6,9 @@ TagManager:
   tags:
   - WinConTag
   - Dirt
+  - GameMusic
   - TimerSword
+
   layers:
   - Default
   - TransparentFX
