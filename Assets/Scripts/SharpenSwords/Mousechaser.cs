@@ -13,7 +13,7 @@ public class Mousechaser : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 mousePos = Input.mousePosition;
        // print(mousePos.x + "x, " + mousePos.y + "y");
