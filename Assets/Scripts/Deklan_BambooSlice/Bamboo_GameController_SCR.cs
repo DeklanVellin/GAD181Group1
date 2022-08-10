@@ -15,6 +15,7 @@ public class Bamboo_GameController_SCR : MonoBehaviour
     void Start()
     {
         secondsLeft = 4;
+       
     }
 
     void Update()
@@ -24,6 +25,9 @@ public class Bamboo_GameController_SCR : MonoBehaviour
             if (secondsLeft > 0)
             {
                 secondsLeft -= Time.deltaTime;
+                GameObject.FindGameObjectWithTag("TimerSword").transform.position += Vector3.down * Time.deltaTime;
+
+
             }
 
             if (secondsLeft <= 0)
