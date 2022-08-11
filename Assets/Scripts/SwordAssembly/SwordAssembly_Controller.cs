@@ -57,7 +57,7 @@ public class SwordAssembly_Controller : MonoBehaviour
     {
         // Count down 4 seconds for player to complete the game
         gameTimer -= Time.deltaTime;
-        GameObject.FindGameObjectWithTag("TimerSword").transform.position += (Vector3.down * Time.deltaTime)*28.7f;
+        GameObject.FindGameObjectWithTag("TimerSword").transform.position += (Vector3.down * Time.deltaTime) * 28.7f;
 
         if(sequenceProgress == 4 && gameActive)
         {
