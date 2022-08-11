@@ -10,7 +10,7 @@ public class ControllerButton : MonoBehaviour
 	//Allows the button to be clicked when 'Fire1' is over it, also detects when the cursor and colliders collide.
 	void OnTriggerStay(Collider colliderData)
 	{
-		print("collision");
+		//print("collision");
 		if(Input.GetButton("Fire1"))
 		{
 			myButton.onClick.Invoke();

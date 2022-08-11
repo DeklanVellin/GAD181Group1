@@ -57,6 +57,7 @@ public class SwordAssembly_Controller : MonoBehaviour
     {
         // Count down 4 seconds for player to complete the game
         gameTimer -= Time.deltaTime;
+        GameObject.FindGameObjectWithTag("TimerSword").transform.position += (Vector3.down * Time.deltaTime) * 28.7f;
 
         if(sequenceProgress == 4 && gameActive)
         {
@@ -80,14 +81,22 @@ public class SwordAssembly_Controller : MonoBehaviour
 
     public void ButtonActivated(int buttonID)
     {
+        print("You have chosen" + buttonID);
+
         if (gameActive)
         {
 			if(buttonID == sequenceProgress)
 			{
+                print("CORRECT");
+
                 MovePiece();
                 sequenceProgress++;
 			}
-			else if(Input.GetButtonDown("Fire1"))
+            else if(buttonID < sequenceProgress)
+            {
+                print("Overclicked");
+            }
+			else
 			{
                 // The player loses if they press an incorrect button
                 // Notify the transition manager the game has been lost
