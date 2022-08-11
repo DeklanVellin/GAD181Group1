@@ -22,7 +22,7 @@ public class SwordParry_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GameObject.FindGameObjectWithTag("TimerSword").transform.position += (Vector3.down * Time.deltaTime)*2; 
     }
 
     void WinCondition()

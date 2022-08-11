@@ -26,6 +26,7 @@ public class SwordKayaking_GameManager : MonoBehaviour
     {
         spawnTimer -= Time.deltaTime;
         gameTimer -= Time.deltaTime;
+        GameObject.FindGameObjectWithTag("TimerSword").transform.position += (Vector3.down * Time.deltaTime)/2;
 
         if (spawnTimer <= 0)
         {
