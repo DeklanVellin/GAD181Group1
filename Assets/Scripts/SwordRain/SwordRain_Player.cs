@@ -22,7 +22,7 @@ public class SwordRain_Player : MonoBehaviour
         if(canMove)
         {
             // Only allow horizontal movement within the camera boundaries
-            float curPos = Mathf.Clamp(this.transform.position.x + Input.GetAxis("Horizontal") * speed, lowerLimit, upperLimit);
+            float curPos = Mathf.Clamp(this.transform.position.x + Input.GetAxis("Horizontal") * (speed)/2, lowerLimit, upperLimit);
             this.transform.position = new
             Vector3(curPos, this.transform.position.y, this.transform.position.z);
         }
