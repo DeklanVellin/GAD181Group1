@@ -80,14 +80,22 @@ public class SwordAssembly_Controller : MonoBehaviour
 
     public void ButtonActivated(int buttonID)
     {
+        print("You have chosen" + buttonID);
+
         if (gameActive)
         {
 			if(buttonID == sequenceProgress)
 			{
+                print("CORRECT");
+
                 MovePiece();
                 sequenceProgress++;
 			}
-			else if(Input.GetButtonDown("Fire1"))
+            else if(buttonID < sequenceProgress)
+            {
+                print("Overclicked");
+            }
+			else
 			{
                 // The player loses if they press an incorrect button
                 // Notify the transition manager the game has been lost
