@@ -27,7 +27,7 @@ public class SceneController : MonoBehaviour
         */
 
         //For the final win screens to show if you won or lost the game
-        if (totalWins >= 7 && remainingLives > 0)
+        if (totalWins >= 5 && remainingLives > 0)
 		{
 			SceneManager.LoadScene(13);
 		}
