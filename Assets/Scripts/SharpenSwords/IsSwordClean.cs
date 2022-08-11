@@ -20,10 +20,12 @@ public class IsSwordClean : MonoBehaviour
     void Update()
     {
         dateTimer -= Time.deltaTime;
+        GameObject.FindGameObjectWithTag("TimerSword").transform.position += Vector3.down * Time.deltaTime;
 
         if (dateTimer <= 0)
         {
             gameComplete.WinScreen(false);
+            
         }
 
         if (clean == 3)

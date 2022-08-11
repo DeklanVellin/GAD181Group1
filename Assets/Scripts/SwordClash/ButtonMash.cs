@@ -53,7 +53,7 @@ public class ButtonMash : MonoBehaviour
 
 
             //enemy moves to the left, player moves to the right, position of object is the difference between the player score and enemy score
-            indicator.transform.position = new Vector3((playerCount - enemyCount) * speed, 0, 0);
+            indicator.transform.position = new Vector3((playerCount - enemyCount) * speed, -1.4f, 0);
 
             //the score is determined by the difference between the player and the enemies
             currentScore = playerCount - enemyCount;
@@ -77,6 +77,7 @@ public class ButtonMash : MonoBehaviour
                 if (secondsLeft > 0)
                 {
                     secondsLeft -= Time.deltaTime;
+                    GameObject.FindGameObjectWithTag("TimerSword").transform.position += Vector3.down * Time.deltaTime;
                 }
 
                 if (secondsLeft <= 0)
