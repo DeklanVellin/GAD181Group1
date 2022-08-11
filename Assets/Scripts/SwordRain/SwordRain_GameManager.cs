@@ -20,6 +20,7 @@ public class SwordRain_GameManager : MonoBehaviour
     void Update()
     {
         rainTimer -= Time.deltaTime;
+        GameObject.FindGameObjectWithTag("TimerSword").transform.position += Vector3.down * Time.deltaTime;
 
         if(rainTimer <= 0)
         {
