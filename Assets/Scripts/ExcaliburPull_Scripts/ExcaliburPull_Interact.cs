@@ -14,6 +14,7 @@ public class ExcaliburPull_Interact : MonoBehaviour
     void Update()
     {
         swordTimer += Time.deltaTime;
+        GameObject.FindGameObjectWithTag("TimerSword").transform.position += Vector3.down * Time.deltaTime;
         //This is moving the sword up 1 unit everytime space is pressed. The += means it's moving and setting from current coords than just moving the prefab to 0,1,0
         if (Input.GetButtonDown("Fire1"))
         {

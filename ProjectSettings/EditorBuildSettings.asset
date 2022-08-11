@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Other/FinalLoss_SCN.unity
     guid: b4f59bf2774ed8043ac738429d1b1c4b
+  - enabled: 1
+    path: Assets/Scenes/MicroGames/FruitNinja_SCN.unity
+    guid: 39062788d30103f48bb9330ba162c783
   m_configObjects: {}

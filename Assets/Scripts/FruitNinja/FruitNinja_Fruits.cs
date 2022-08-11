@@ -19,8 +19,9 @@ public class FruitNinja_Fruits : MonoBehaviour
     {
         this.transform.position += Vector3.up * Time.deltaTime * initialVelocity;
 
-        if(this.transform.position.y <= -7)
+        if(this.transform.position.y <= -7 && this.GetComponent<CircleCollider2D>()!= null )
         {
+            
             Destroy(this.gameObject);
             print("Fruit Missed");
         }

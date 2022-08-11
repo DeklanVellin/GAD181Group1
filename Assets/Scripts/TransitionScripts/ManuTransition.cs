@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ManuTransition : MonoBehaviour
 {
 	
-	static List<int> LevelsToPlay = new List<int> { 1, 2, 3, 4, 5, 8, 9, 10, 11};
+	static List<int> LevelsToPlay = new List<int> { 1, 2, 3, 4, 5, 8, 9, 10, 11, 15};
 	public int sceneRandomiser;
     int playerWins = 0;
     int playerLives = 3;
@@ -14,9 +14,9 @@ public class ManuTransition : MonoBehaviour
     // Start is called before the first frame update
     public void Play()
     {
-        PlayerPrefs.SetInt("CurrentLives", playerLives);
         PlayerPrefs.SetInt("WinTotal", playerWins);
-		print("Lives:" + playerLives);
+        PlayerPrefs.SetInt("CurrentLives", playerLives);
+		//print("Lives:" + playerLives);
 
 
         int nextLevelIndex = Random.Range(0, LevelsToPlay.Count);

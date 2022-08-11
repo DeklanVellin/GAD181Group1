@@ -6,7 +6,7 @@ using UnityEngine;
 public class FruitNinja_GameManager : MonoBehaviour
 {
     SceneController gameComplete;
-    float gameTimer = 30f;
+    public float gameTimer = 15f;
     public int success;
 
     // Start is called before the first frame update
