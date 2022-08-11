@@ -5,7 +5,10 @@ using UnityEngine;
 public class SwordKayaking_Arrows : MonoBehaviour
 {
     float lifeTime;
+
     public string input;
+    public string controllerDirection;
+    public float controllerInput;
 
     SwordKayaking_GameManager missCount;
 
@@ -28,24 +31,32 @@ public class SwordKayaking_Arrows : MonoBehaviour
                 this.transform.Rotate(0, 0, 0, Space.World);
 
                 input = "up";
+                controllerDirection = "Vertical";
+                controllerInput = 1;
                 break;
             case 1:
                 print("LEFT");
                 this.transform.Rotate(0, 0, 90, Space.World);
 
                 input = "left";
+                controllerDirection = "Horizontal";
+                controllerInput = -1;
                 break;
             case 2:
                 print("RIGHT");
                 this.transform.Rotate(0, 0, -90, Space.World);
 
                 input = "right";
+                controllerDirection = "Horizontal";
+                controllerInput = 1;
                 break;
             case 3:
                 print("DOWN");
                 this.transform.Rotate(0, 0, 180, Space.World);
 
                 input = "down";
+                controllerDirection = "Vertical";
+                controllerInput = -1;
                 break;
         }
     }
@@ -57,7 +68,7 @@ public class SwordKayaking_Arrows : MonoBehaviour
 
         // If the player hits the correct key they get a hit
         // Otherwise if it is active too long or they hit the wrong key it's counted as a miss
-        if (Input.GetKeyDown(input))
+        if (Input.GetKeyDown(input) || Input.GetAxis(controllerDirection) == controllerInput)
         {
             print("Key Hit");
             missCount.ArrowResult(true);
