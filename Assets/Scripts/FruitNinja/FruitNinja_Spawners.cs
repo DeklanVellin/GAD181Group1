@@ -40,7 +40,7 @@ public class FruitNinja_Spawners : MonoBehaviour
             }
             else if (Random.Range(0, 500) == 5)
             {
-                Instantiate(fruits[Random.Range(0, fruits.Length)], transform.position, transform.rotation);
+                Instantiate(fruits[Random.Range(0, 1/*fruits.Length*/)], transform.position, transform.rotation);
                 spawnTimer = 0.5f;//Random.Range(1f, 1.5f);
 
             }

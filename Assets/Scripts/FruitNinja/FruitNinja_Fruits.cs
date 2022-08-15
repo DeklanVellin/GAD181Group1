@@ -8,10 +8,14 @@ public class FruitNinja_Fruits : MonoBehaviour
 
     bool isWhole = true;
 
+    public Transform Apple;
+
+
     // Start is called before the first frame update
     void Start()
     {
         initialVelocity = Random.Range(7f,13f);
+        Apple.GetComponent<ParticleSystem>().enableEmission = false;
     }
 
     // Update is called once per frame
@@ -40,6 +44,7 @@ public class FruitNinja_Fruits : MonoBehaviour
             GameObject.FindObjectOfType<FruitNinja_GameManager>().success++;
             GameObject.FindObjectOfType<FruitNinja_Spawners>().canSpawn = true;
             print("Fruit Cut");
+            Apple.GetComponent<ParticleSystem>().enableEmission = true;
             Destroy(this.gameObject.GetComponent<CircleCollider2D>());
         }
     }

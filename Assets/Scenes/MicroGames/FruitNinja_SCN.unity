@@ -147,7 +147,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179369026}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e360b7233e6ff7f4c9f11d98011939cc, type: 3}
@@ -386,6 +386,37 @@ MonoBehaviour:
   - {fileID: 7932580144613050272, guid: 0115dc70ed8fb224ab7184fd31797b5f, type: 3}
   - {fileID: 8199169654485842959, guid: 484048f6b8d769f4ca2a1287874cac66, type: 3}
   canSpawn: 1
+--- !u!1 &968304002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968304003}
+  m_Layer: 0
+  m_Name: SlicedFruit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &968304003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968304002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.149123, y: -0.059117302, z: 0.038255125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106070920
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +597,7 @@ GameObject:
   - component: {fileID: 1214755450}
   - component: {fileID: 1214755449}
   m_Layer: 0
-  m_Name: Sword (1)
+  m_Name: TimerSword
   m_TagString: TimerSword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -980,7 +1011,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3e8a3809c0934cc4f8d26bae542cf8be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -999,8 +1030,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707516635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0.24, y: 0.92, z: 0}
+  m_LocalScale: {x: 0.13555, y: 0.1331, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1019,18 +1050,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.3551731, y: 0.00000023841858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 10.28, y: 10.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8.281063, y: 8.415089}
   m_EdgeRadius: 0
 --- !u!1 &1961286005
 GameObject:
@@ -1044,7 +1075,7 @@ GameObject:
   - component: {fileID: 1961286007}
   - component: {fileID: 1961286006}
   m_Layer: 0
-  m_Name: Sheathe
+  m_Name: TimerSheathe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1160,7 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d2676c30e7560945a53c943239c5f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTimer: 8
+  gameTimer: 9999
   success: 0
 --- !u!4 &2075788844
 Transform:
@@ -1184,10 +1215,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075788842}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff791b44d4b3d2d4d904723a0f64c00a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLives: 0
+  playerLives: 3
   totalWins: 0
