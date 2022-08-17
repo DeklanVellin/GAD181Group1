@@ -9,15 +9,14 @@ TagManager:
   - Carrot
   - GameMusic
   - TimerSword
-
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Sword
+  - 
   - Water
   - UI
-  - Fruit
+  - 
   - 
   - 
   - 
@@ -44,15 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: GameBackground
-    uniqueID: 3454337601
-    locked: 0
-  - name: Backgrounds
-    uniqueID: 4268107431
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Border
-    uniqueID: 3876953577
+  - name: test
+    uniqueID: 364921477
     locked: 0
