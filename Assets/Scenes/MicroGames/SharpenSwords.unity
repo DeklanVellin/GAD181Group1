@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2846f7c4e62a4cf43bb66a2af19fcea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.018
 --- !u!135 &185360829
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &185360832
 Transform:
@@ -1589,7 +1589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07280b15f7e3738419f0f0d4911c6b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dateTimer: 4
+  dateTimer: 99999
   winCondition: 0
   gameComplete: {fileID: 1136424856}
   clean: 0

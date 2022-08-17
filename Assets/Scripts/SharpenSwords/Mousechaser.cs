@@ -17,7 +17,7 @@ public class Mousechaser : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
        // print(mousePos.x + "x, " + mousePos.y + "y");
-        this.transform.position = (mousePos - new Vector3(Screen.width / 2, Screen.height / 2, 0))*speed;
+        this.transform.position = (mousePos - new Vector3(Screen.width / 2, Screen.height / 2, 0))*(speed/2);
 
 
     }
