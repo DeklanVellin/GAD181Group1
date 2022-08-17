@@ -21,7 +21,7 @@ public class ControllerMouse : MonoBehaviour
 		{
 			Vector3 mousePos = Input.mousePosition;
 			//print(mousePos.x + "x, " + mousePos.y + "y");
-			this.transform.position = (mousePos - new Vector3(Screen.width / 2, Screen.height / 2, 0))*0.007f;
+			this.transform.position = (mousePos - new Vector3(Screen.width / 2, Screen.height / 2, 0))*0.009f;
 		}
 		else
 		{

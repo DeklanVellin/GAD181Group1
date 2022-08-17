@@ -15,7 +15,7 @@ public class DirtySword : MonoBehaviour
     {
         if (collisionData.gameObject.name == "Hand")
         {
-            print("Don't touch me " + collisionData.gameObject.name);
+            //print("Don't touch me " + collisionData.gameObject.name);
             
             Destroy(this.gameObject);
             GameObject.FindObjectOfType<IsSwordClean>().clean++;
