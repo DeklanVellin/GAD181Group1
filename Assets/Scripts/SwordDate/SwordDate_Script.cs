@@ -41,6 +41,7 @@ public class SwordDate_Script : MonoBehaviour
 	{
 		//Timer nonsense! First line is setting up the timer itself while the if statement is 'if the timer reachers 0, load lose screen'.
 		dateTimer -= Time.deltaTime;
+		GameObject.FindGameObjectWithTag("TimerSword").transform.position += (Vector3.down * Time.deltaTime)/2;
 		
 		if(dateTimer <= 0)
 		{
