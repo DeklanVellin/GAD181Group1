@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneRandomiser : MonoBehaviour
 {
-    static List<int> LevelsToPlay = new List<int> { 1, 2, 3, 4, 5, 8, 9, 10, 11};
+    static List<int> LevelsToPlay = new List<int> { 1, 2, 3, 4, 5, 8, 9, 10, 11, 15};
     public int sceneRandomiser;
 
     void Start()
